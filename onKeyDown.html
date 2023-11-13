@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="randomLetter">Press the correct key!</p>
+
+<script>
+  var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+  function generateRandomLetter() {
+    var randomIndex = Math.floor(Math.random() * letters.length);
+    return letters[randomIndex];
+  }
+
+  document.addEventListener("keydown", function(event) {
+    var randomLetter = document.getElementById("randomLetter");
+    var correctKey = randomLetter.innerText.toUpperCase();
+    if (event.key.toUpperCase() === correctKey) {
+      randomLetter.innerText = "Press the correct key!";
+      randomLetter.style.color = "black";
+    } else {
+      randomLetter.innerText = "Wrong key! Try again.";
+      randomLetter.style.color = "red";
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var randomLetter = document.getElementById("randomLetter");
+    randomLetter.innerText = generateRandomLetter();
+  });
+</script>
+
+</body>
+</html>

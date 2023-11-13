@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="tooltipElement">Hover Me</div>
+
+<script>
+  document.getElementById("tooltipElement").addEventListener("mouseover", function() {
+    var tooltip = document.createElement("div");
+    tooltip.innerText = "Tooltip Text";
+    tooltip.style.position = "absolute";
+    tooltip.style.top = "20px";
+    tooltip.style.left = "20px";
+    document.body.appendChild(tooltip);
+  });
+</script>
+
+</body>
+</html>

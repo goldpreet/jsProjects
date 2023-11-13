@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="toggleElement" style="display:none">Hover Over Me</div>
+
+<script>
+  document.getElementById("toggleElement").addEventListener("mouseover", function() {
+    var element = document.getElementById("toggleElement");
+    element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+  });
+</script>
+
+</body>
+</html>
